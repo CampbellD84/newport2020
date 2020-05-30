@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import * as Mixins from '../Mixins';
 import * as t from '../Typography';
 import Layout, { Content } from '../components/Layout';
+import BizQR from '../images/bizqr.png';
+import NoiseCtrl from '../images/noisectrl.png';
+import Groovn from '../images/groovn.png';
+import Pillage from '../images/pillage.png';
 import Placeholder from '../images/placeholder.png';
 import { HireMe, LinkButton } from '../components/Button.js';
 import HireMePopup from '../components/HireMePopup.js';
@@ -57,6 +61,20 @@ const DivWrapper = styled.div`
       margin-bottom: 40px;
   `};
   }
+`;
+
+const SkillsSection = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  ${media.phone`
+    display: flex;
+    flex-direction: column;
+  `}
+`;
+
+const SkillsList = styled.ul`
+  list-style-type: none;
+  margin-top: -25px;
 `;
 
 const ItemImage = styled.img`
@@ -146,10 +164,10 @@ class Homepage extends React.Component {
           <AboveFold>
             <Img fluid={data.avatarHomepage.childImageSharp.fluid} alt="Name Surname" className="avatar" />
             <t.H1 primary align="center">
-              Name Surname
+              Douglas Campbell
             </t.H1>
             <t.LargeP align="center" max45>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Full Stack Developer
             </t.LargeP>
             <HireMe large onClick={this.openContactPopup} book>
               Hire me
@@ -157,28 +175,89 @@ class Homepage extends React.Component {
           </AboveFold>
           <Content>
             <t.H2 primary align="center" bold>
-              Lorem ipsum
+              Skills
             </t.H2>
-            <t.P align="center" max70 className="who-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </t.P>
+            <SkillsSection>
+              <div className="skill-cat">
+                <t.H4 primary align="center" bold>
+                  Languages:
+                </t.H4>
+                <SkillsList>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript (ES6+)</li>
+                  <li>TypeScript</li>
+                  <li>Python</li>
+                </SkillsList>
+              </div>
+              <div className="skill-cat">
+                <t.H4 primary align="center" bold>
+                  Frameworks/Libraries/etc.:
+                </t.H4>
+                <SkillsList>
+                  <li>React/Redux/MobX</li>
+                  <li>NodeJS</li>
+                  <li>ExpressJS</li>
+                  <li>Django</li>
+                  <li>Bootstrap</li>
+                  <li>MaterialUI</li>
+                </SkillsList>
+              </div>
+              <div className="skill-cat">
+                <t.H4 primary align="center" bold>
+                  Database:
+                </t.H4>
+                <SkillsList>
+                  <li>SQL(PostgresQL)</li>
+                  <li>NoSQL(MongoDB)</li>
+                  <li>GraphQL(Apollo)</li>
+                </SkillsList>
+              </div>
+              <div className="skill-cat">
+                <t.H4 primary align="center" bold>
+                  Tools
+                </t.H4>
+                <SkillsList>
+                  <li>Visual Studio Code</li>
+                  <li>Git/Github</li>
+                  <li>NPM</li>
+                  <li>Yarn</li>
+                  <li>Webpack</li>
+                </SkillsList>
+              </div>
+            </SkillsSection>
+
+            <t.P align="center" max70 className="who-desc"></t.P>
             <t.H2 primary align="center" bold className="portfolio">
-              Portfolio
+              Projects
             </t.H2>
           </Content>
           <Block>
             <BlockContent>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={BizQR} alt="BizQR Page" />
               </DivWrapper>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
+                <t.H2 bold>BizQR</t.H2>
+                <t.P>User Interface</t.P>
+                <t.P>
+                  A multi-page marketing website for a business card organizer application using HTML5, CSS3, LESS,
+                  Responsive Web Design and JavaScript(ES2015).
+                </t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="https://tinyurl.com/y8trcr6j">
+                  View Site
+                </LinkButton>
+                <br />
+                <br />
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="https://github.com/businesscardorganizer-pt-042219/labs1-businesscardorganizer-UI-Douglas-"
+                >
+                  GitHub
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -186,17 +265,30 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
+                <t.H2 bold>Noise Controller</t.H2>
+                <t.P>Front End</t.P>
+                <t.P>
+                  Front End for an app to gamify quieting a loud classroom. Built using React, Redux for state
+                  management, Recharts for data visualization, Reactstrap, and the Web Audio API to pick up sound input.
+                </t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="https://tinyurl.com/ycs7gnxa">
+                  View App
+                </LinkButton>
+                <br />
+                <br />
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="https://github.com/noise-controller-bw/Front-End"
+                >
+                  GitHub
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={NoiseCtrl} alt="Noise Controller App" />
               </DivWrapper>
             </BlockContent>
           </Block>
@@ -206,13 +298,13 @@ class Homepage extends React.Component {
                 <ItemImage src={Placeholder} alt="Placeholder title" />
               </DivWrapper>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
+                <t.H2 bold>Artist Portfolio</t.H2>
+                <t.P>Back End</t.P>
+                <t.P>
+                  An API using NodeJS, Express, SQL for data storage, Knex as an ORM, Supertest and Jest for testing.
+                </t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="https://tinyurl.com/yapwc8y8">
+                  GitHub
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -220,25 +312,54 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
+                <t.H2 bold>GroovnMusic</t.H2>
+                <t.P>Full Stack</t.P>
+                <t.P>
+                  A music recommendation application built using the Spotify API, MongoDB for data storage, Mongoose,
+                  Apollo Server, GraphQL, NodeJS, and Express on the back end. The front end used React (w/ Context API
+                  and Hooks), Apollo Boost, PassportJS and OAuth. Recommendation engine built using Python and Flask.
+                </t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="https://tinyurl.com/ycsbcbk2">
+                  GitHub
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={Groovn} alt="GroovnMusic App" />
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <t.H2 bold>Pillage and Plunder</t.H2>
+                <t.P>Back End</t.P>
+                <t.P>
+                  A Multi-User Dungeon game with Python, Django and SQL on the back end and React on the front end.
+                </t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="https://tinyurl.com/yad59g38">
+                  View App
+                </LinkButton>
+                <br />
+                <br />
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://github.com/MudTeamI/CS-Build-Week-1"
+                >
+                  GitHub
+                </LinkButton>
+              </DivWrapper>
+              <DivWrapper>
+                <ItemImage src={Pillage} alt="Pillage and Plunder Game" />
               </DivWrapper>
             </BlockContent>
           </Block>
           <WorkWithMe>
             <t.H1 green>Get in touch with me</t.H1>
-            <t.LargeP>
-              Fancy working with me? Contact me for more info!{' '}
-            </t.LargeP>
+            <t.LargeP>Interested in working with me? Contact me for more info! </t.LargeP>
             <HireMe onClick={this.openContactPopup} book>
               Contact me
             </HireMe>
