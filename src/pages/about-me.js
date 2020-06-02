@@ -5,7 +5,7 @@ import * as t from '../Typography';
 import Layout, { Content } from '../components/Layout';
 import HireMePopup from '../components/HireMePopup.js';
 import { media } from '../MediaQueries';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
 const AboveFold = styled.div`
@@ -78,7 +78,7 @@ class AboutMe extends React.Component {
 
   render() {
     const { openHireMePopup } = this.state;
-    const { data } = this.props;
+    // const { data } = this.props;
     return (
       <AboutMeWrapper>
         <Layout theme="white" openContactPopup={this.openContactPopup}>
@@ -97,7 +97,7 @@ class AboutMe extends React.Component {
             </t.LargeP>
           </AboveFold>
           <Content>
-            <Img fluid={data.avatarAbout.childImageSharp.fluid} alt="Douglas Campbell" className="avatar" />
+            {/* <Img fluid={data.avatarAbout.childImageSharp.fluid} alt="Douglas Campbell" className="avatar" /> */}
           </Content>
         </Layout>
         <HireMePopup open={openHireMePopup} handleClose={this.handleRequestDemoClose} />
