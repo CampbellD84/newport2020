@@ -180,7 +180,7 @@ class Homepage extends React.Component {
             <SkillsSection>
               <div className="skill-cat">
                 <t.H4 primary align="center" bold>
-                  Languages:
+                  Languages
                 </t.H4>
                 <SkillsList>
                   <li>HTML</li>
@@ -192,7 +192,7 @@ class Homepage extends React.Component {
               </div>
               <div className="skill-cat">
                 <t.H4 primary align="center" bold>
-                  Frameworks/Libraries/etc.:
+                  Frameworks/Libraries/etc
                 </t.H4>
                 <SkillsList>
                   <li>React/Redux/MobX</li>
@@ -205,7 +205,7 @@ class Homepage extends React.Component {
               </div>
               <div className="skill-cat">
                 <t.H4 primary align="center" bold>
-                  Database:
+                  Database
                 </t.H4>
                 <SkillsList>
                   <li>SQL(PostgresQL)</li>

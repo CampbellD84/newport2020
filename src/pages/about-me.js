@@ -59,6 +59,11 @@ const AboutMeWrapper = styled.div`
   }
 `;
 
+const HomeLink = styled.a`
+  text-decoration: none;
+  color: #30231d;
+`;
+
 class AboutMe extends React.Component {
   state = {
     openHireMePopup: false
@@ -95,6 +100,7 @@ class AboutMe extends React.Component {
               </p>
               <p>dcampbelltbone@gmail.com</p>
             </t.LargeP>
+            <HomeLink href="/">&lt;&lt; Back to Home</HomeLink>
           </AboveFold>
           <Content>
             {/* <Img fluid={data.avatarAbout.childImageSharp.fluid} alt="Douglas Campbell" className="avatar" /> */}

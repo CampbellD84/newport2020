@@ -92,7 +92,11 @@ class HireMePopup extends React.Component {
             <img src={LN} alt="Douglas Campbell's Linkedin profile" />
           </Link>
           <Link primary bold target="_blank" href="https://www.twitter.com/theabsurdistdev">
-            <img src={Bird} alt="Douglas Campbell's Twitter profile" />
+            <img
+              src={Bird}
+              alt="Douglas Campbell's Twitter profile"
+              style={{ maxHeight: '100px', maxWidth: '150px' }}
+            />
           </Link>
         </ContentWrapper>
       </HireMePopupWrapper>
