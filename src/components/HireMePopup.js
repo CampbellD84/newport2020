@@ -5,6 +5,7 @@ import * as t from '../Typography';
 import Colors from '../Colors';
 import LN from '../images/ln.png';
 import Bird from '../images/twitter.png';
+import Email from '../images/email-icon.png';
 import Close from '../images/close-popup-grey.png';
 import { media } from '../MediaQueries';
 import Helmet from 'react-helmet';
@@ -97,6 +98,9 @@ class HireMePopup extends React.Component {
               alt="Douglas Campbell's Twitter profile"
               style={{ maxHeight: '100px', maxWidth: '150px' }}
             />
+          </Link>
+          <Link primary bold target="_blank" href="mailto:dacampbelltbone@gmail.com">
+            <img src={Email} alt="Email Douglas Campbell" style={{ maxHeight: '100px', maxWidth: '150px' }} />
           </Link>
         </ContentWrapper>
       </HireMePopupWrapper>

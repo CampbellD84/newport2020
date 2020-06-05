@@ -96,9 +96,8 @@ class AboutMe extends React.Component {
                 Hello, I'm Douglas. I'm a Full stack web developer with an interest in Blockchain, Ethereum, Data
                 Visualization, functional programming and GraphQL. I'm able to adapt well and work with various
                 development stacks and programming languages. I am reliable, a quick learner, versatile and a creative
-                problem solver. If you're interested in hiring me, please contact me at:
+                problem solver. If you're interested in hiring me, please contact me.
               </p>
-              <p>dcampbelltbone@gmail.com</p>
             </t.LargeP>
             <HomeLink href="/">&lt;&lt; Back to Home</HomeLink>
           </AboveFold>
