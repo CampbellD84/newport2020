@@ -172,6 +172,11 @@ class Homepage extends React.Component {
             <HireMe large onClick={this.openContactPopup} book>
               Hire me
             </HireMe>
+            <a href="#projects">
+              <HireMe large book style={{ marginLeft: '10px' }}>
+                Projects
+              </HireMe>
+            </a>
           </AboveFold>
           <Content>
             <t.H2 primary align="center" bold>
@@ -228,7 +233,7 @@ class Homepage extends React.Component {
             </SkillsSection>
 
             <t.P align="center" max70 className="who-desc"></t.P>
-            <t.H2 primary align="center" bold className="portfolio">
+            <t.H2 primary align="center" id="projects" bold className="portfolio">
               Projects
             </t.H2>
           </Content>
