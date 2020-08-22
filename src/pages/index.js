@@ -200,7 +200,7 @@ class Homepage extends React.Component {
                   Frameworks/Libraries/etc
                 </t.H4>
                 <SkillsList>
-                  <li>React/Redux/MobX</li>
+                  <li>React/Redux</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
                   <li>Django</li>
@@ -213,7 +213,7 @@ class Homepage extends React.Component {
                   Database
                 </t.H4>
                 <SkillsList>
-                  <li>SQL(PostgresQL)</li>
+                  <li>SQL(PostgreSQL)</li>
                   <li>NoSQL(MongoDB)</li>
                   <li>GraphQL(Apollo)</li>
                 </SkillsList>
