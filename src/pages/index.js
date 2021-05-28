@@ -8,6 +8,7 @@ import NoiseCtrl from '../images/noisectrl.png';
 import Groovn from '../images/groovn.png';
 import Pillage from '../images/pillage.png';
 import Placeholder from '../images/placeholder.png';
+import FauxMarketCap from '../images/fauxmarketcap.png';
 import { HireMe, LinkButton } from '../components/Button.js';
 import HireMePopup from '../components/HireMePopup.js';
 import { media } from '../MediaQueries';
@@ -193,6 +194,8 @@ class Homepage extends React.Component {
                   <li>JavaScript (ES6+)</li>
                   <li>TypeScript</li>
                   <li>Python</li>
+                  <li>Golang</li>
+                  <li>Solidity</li>
                 </SkillsList>
               </div>
               <div className="skill-cat">
@@ -200,10 +203,12 @@ class Homepage extends React.Component {
                   Frameworks/Libraries/etc
                 </t.H4>
                 <SkillsList>
-                  <li>React/Redux</li>
+                  <li>React</li>
+                  <li>Redux</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
                   <li>Django</li>
+                  <li>NextJS</li>
                   <li>Bootstrap</li>
                   <li>MaterialUI</li>
                 </SkillsList>
@@ -224,10 +229,10 @@ class Homepage extends React.Component {
                 </t.H4>
                 <SkillsList>
                   <li>Visual Studio Code</li>
-                  <li>Git/Github</li>
+                  <li>Git</li>
+                  <li>Github</li>
                   <li>NPM</li>
                   <li>Yarn</li>
-                  <li>Webpack</li>
                 </SkillsList>
               </div>
             </SkillsSection>
@@ -359,6 +364,43 @@ class Homepage extends React.Component {
               </DivWrapper>
               <DivWrapper>
                 <ItemImage src={Pillage} alt="Pillage and Plunder Game" />
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <t.H2 bold>Faux Market Cap</t.H2>
+                <t.P>Full Stack</t.P>
+                <t.P>
+                  Cryptocurrency Exchange Dashboard that lists coins, price, market cap, and change within 24 hours.
+                  Built using React, NextJS, TypeScript, Grommet, and CoinGecko API.
+                </t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://jovial-dijkstra-02682c.netlify.app/"
+                >
+                  View App
+                </LinkButton>
+                <br />
+                <br />
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://github.com/CampbellD84/coin-exchange"
+                >
+                  GitHub
+                </LinkButton>
+              </DivWrapper>
+              <DivWrapper>
+                <ItemImage src={FauxMarketCap} alt="Faux Market Cap Coin Exchange" />
               </DivWrapper>
             </BlockContent>
           </Block>
