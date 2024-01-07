@@ -20,7 +20,7 @@ const HireMePopupWrapper = styled.div`
   z-index: 1000;
   display: flex;
   flex-direction: row;
-  ${props =>
+  ${(props) =>
     props.open === false &&
     `
     display: none;
@@ -59,9 +59,10 @@ const Burger = styled.div`
   top: 25px;
   color: ${Colors.closeIcon};
   z-index: 2;
-  color: ${props => props.scrolled && Colors.darkest};
+  color: ${(props) => props.scrolled && Colors.darkest};
   &:hover {
-    ${props => (props.scrolled || props.theme === 'white' ? lighten(0.3, Colors.darkest) : darken(0.1, Colors.white))};
+    ${(props) =>
+      props.scrolled || props.theme === 'white' ? lighten(0.3, Colors.darkest) : darken(0.1, Colors.white)};
     cursor: pointer;
     opacity: 0.9;
   }
@@ -72,7 +73,7 @@ const Burger = styled.div`
 `;
 
 class HireMePopup extends React.Component {
-  closePopup = e => {
+  closePopup = (e) => {
     this.props.handleClose(false);
   };
 
@@ -92,7 +93,7 @@ class HireMePopup extends React.Component {
           <Link primary bold target="_blank" href="https://www.linkedin.com/in/douglas-campbell-dev">
             <img src={LN} alt="Douglas Campbell's Linkedin profile" />
           </Link>
-          <Link primary bold target="_blank" href="https://www.twitter.com/theabsurdistdev">
+          <Link primary bold target="_blank" href="https://www.twitter.com/0xDcampdev">
             <img
               src={Bird}
               alt="Douglas Campbell's Twitter profile"

@@ -196,6 +196,7 @@ class Homepage extends React.Component {
                   <li>Python</li>
                   <li>Golang</li>
                   <li>Solidity</li>
+                  <li>Rust</li>
                 </SkillsList>
               </div>
               <div className="skill-cat">
@@ -207,7 +208,6 @@ class Homepage extends React.Component {
                   <li>Redux</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
-                  <li>Django</li>
                   <li>NextJS</li>
                   <li>Bootstrap</li>
                   <li>MaterialUI</li>
@@ -233,6 +233,8 @@ class Homepage extends React.Component {
                   <li>Github</li>
                   <li>NPM</li>
                   <li>Yarn</li>
+                  <li>Bun</li>
+                  <li>PNPM</li>
                 </SkillsList>
               </div>
             </SkillsSection>
